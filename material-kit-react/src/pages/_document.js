@@ -35,18 +35,16 @@ const Fonts = () => (
 class CustomDocument extends Document {
   render() {
     return (
-      <ErrorBoundary fallback={<h1>Something went wrong.</h1>}>
-        <Html lang="en">
-          <Head>
-            <Favicon />
-            <Fonts />
-          </Head>
-          <body>
-            <Main />
-            <NextScript />
-          </body>
-        </Html>
-      </ErrorBoundary>
+      <Html lang="en">
+        <Head>
+          <Favicon />
+          <Fonts />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
     );
   }
 }
