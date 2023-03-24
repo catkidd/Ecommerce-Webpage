@@ -1,0 +1,36 @@
+div.react-stars {
+  font-size: 1.2rem;
+}
+
+div.react-stars > ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+div.react-stars > ul > li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+div.react-stars > ul > li:before {
+  content: "\\2605";
+  color: #ddd;
+}
+
+div.react-stars > ul > li:hover:before,
+div.react-stars > ul > li:hover ~ li:before,
+div.react-stars > ul > li.react-stars-selected:before,
+div.react-stars > ul > li.react-stars-selected ~ li:before {
+  content: "\\2605";
+  color: yellow;
+}
