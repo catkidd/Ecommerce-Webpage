@@ -4,14 +4,15 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import AddProductBtn from "src/components/AddProductBtn";
 
 const MenProducts = () => {
   const [productData, setProductData] = useState([]);
 
-  const [file, setFile] = useState();
-  const [productTitle, setProductTitle] = useState();
-  const [productDescription, setProductDescription] = useState();
-  const [productPrice, setProductPrice] = useState();
+  // const [file, setFile] = useState();
+  // const [productTitle, setProductTitle] = useState();
+  // const [productDescription, setProductDescription] = useState();
+  // const [productPrice, setProductPrice] = useState();
 
   useEffect(() => {
     async function fetchProducts() {
@@ -20,41 +21,41 @@ const MenProducts = () => {
     }
     fetchProducts();
   }, []);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
-  const handleSubmit = (event) => {
-    event.preventDefault;
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("productTitle", productTitle);
-    formData.append("productDescription", productDescription);
-    formData.append("productPrice", productPrice);
-    debugger;
-    axios
-      .post("http://localhost:8080/api/products", formData, {
-        headers: {
-          "Content-type": "multipart/formData",
-        },
-      })
-      .then((response) => {
-        handleClose();
-      });
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault;
+  //   const formData = new FormData();
+  //   formData.append("file", file);
+  //   formData.append("productTitle", productTitle);
+  //   formData.append("productDescription", productDescription);
+  //   formData.append("productPrice", productPrice);
+  //   debugger;
+  //   axios
+  //     .post("http://localhost:8080/api/products", formData, {
+  //       headers: {
+  //         "Content-type": "multipart/formData",
+  //       },
+  //     })
+  //     .then((response) => {
+  //       handleClose();
+  //     });
+  // };
 
   return (
     <>
-      <Button
+      {/* <Button
         variant="primary"
         onClick={handleShow}
         style={{ marginLeft: "auto", marginRight: "auto" }}
       >
         Add Product
-      </Button>
+      </Button> */}
 
-      <Modal show={show} onHide={handleClose}>
+      {/* <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Product Modal</Modal.Title>
         </Modal.Header>
@@ -114,8 +115,9 @@ const MenProducts = () => {
             Save Product
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
       <h2 className="heading">Men's Products</h2>
+      <AddProductBtn />
       <div className="wrapper">
         {productData.map((prod) => {
           return <Card key={prod.id} productData={prod} />;

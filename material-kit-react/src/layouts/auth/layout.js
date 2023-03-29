@@ -78,11 +78,11 @@ export const Layout = (props) => {
             >
               Welcome to{" "}
               <Box component="a" sx={{ color: "#15B79E" }} target="_blank">
-                Devias Kit
+                Mahango Deal
               </Box>
             </Typography>
             <Typography align="center" sx={{ mb: 3 }} variant="subtitle1">
-              A professional kit that comes with ready-to-use MUI components.
+              One Destination for all of your Requirements.
             </Typography>
             <img alt="" src="/assets/auth-illustration.svg" />
           </Box>

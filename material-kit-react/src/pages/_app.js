@@ -18,7 +18,9 @@ import "/public/assets/styles/starRating.css";
 import "/public/assets/styles/counterCard.css";
 import { Store } from "../redux/store/store";
 import { Provider } from "react-redux";
-import { ErrorBoundary } from "react-error-boundary";
+import Footer from "src/components/Footer";
+
+// import { ErrorBoundary } from "react-error-boundary";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -34,29 +36,26 @@ const App = (props) => {
   const theme = createTheme();
 
   return (
-    <ErrorBoundary fallback={<h1>Something went wrong.</h1>}>
-      <Provider store={Store}>
-        <CacheProvider value={emotionCache}>
-          <Head>
-            <title>MahangoDeal</title>
-            <meta name="viewport" content="initial-scale=1, width=device-width" />
-          </Head>
-          <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <AuthProvider>
-              <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <AuthConsumer>
-                  {(auth) =>
-                    auth.isLoading ? <SplashScreen /> : getLayout(<Component {...pageProps} />)
-                  }
-                </AuthConsumer>
-              </ThemeProvider>
-            </AuthProvider>
-          </LocalizationProvider>
-          <ToastContainer />
-        </CacheProvider>
-      </Provider>
-    </ErrorBoundary>
+    // <ErrorBoundary fallback={<h1>Something went wrong.</h1>}>
+    <Provider store={Store}>
+      <CacheProvider value={emotionCache}>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <AuthProvider>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <AuthConsumer>
+                {(auth) =>
+                  auth.isLoading ? <SplashScreen /> : getLayout(<Component {...pageProps} />)
+                }
+              </AuthConsumer>
+            </ThemeProvider>
+          </AuthProvider>
+        </LocalizationProvider>
+     
+        <ToastContainer />
+      </CacheProvider>
+    </Provider>
+    // </ErrorBoundary>
   );
 };
 
