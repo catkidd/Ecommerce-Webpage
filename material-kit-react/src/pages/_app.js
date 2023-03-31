@@ -16,6 +16,10 @@ import "/public/assets/styles/card.css";
 import "/public/assets/styles/carausel.css";
 import "/public/assets/styles/starRating.css";
 import "/public/assets/styles/counterCard.css";
+import "/public/assets/styles/singleProduct.css";
+import "/public/assets/styles/footer.css";
+// import "/public/assets/styles/button.css";
+
 import { Store } from "../redux/store/store";
 import { Provider } from "react-redux";
 import Footer from "src/components/Footer";
@@ -51,7 +55,7 @@ const App = (props) => {
             </ThemeProvider>
           </AuthProvider>
         </LocalizationProvider>
-     
+
         <ToastContainer />
       </CacheProvider>
     </Provider>

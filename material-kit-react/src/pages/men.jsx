@@ -1,130 +1,108 @@
-import React, { useEffect, useState } from "react";
+// import React, { useState, useEffect } from "react";
+// import Card from "../components/cards/card";
+// import axios from "axios";
+// import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
+// import Head from "next/head";
+// import { Box, Container, Stack, Typography, Unstable_Grid2 as Grid } from "@mui/material";
+// import AddProductBtn from "src/components/AddProductBtn";
+
+// const Page = () => {
+//   const [productData, setProductData] = useState([]);
+//   const [isError, setIsError] = useState();
+
+//   useEffect(() => {
+//     const fetchProducts = async () => {
+//       try {
+//         const response = await axios.get("http://localhost:8080/menProduct");
+//         setProductData(response.data.data);
+//       } catch (error) {
+//         setIsError(error.message);
+//       }
+//     };
+//     fetchProducts();
+//   }, []);
+
+//   return (
+//     <>
+//       <Head>
+//         <title>Men&apos;s Clothing | Mahango Deal</title>
+//       </Head>
+//       <Box component="main" sx={{ flexGrow: 1, py: 8 }}>
+//         <Container maxWidth="lg">
+//           <Stack spacing={3}>
+//             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+//               <Typography variant="h4">Men&apos;s Clothing</Typography>
+//               <AddProductBtn />
+//             </Box>
+//             {isError !== "" && <h2>{isError}</h2>}
+//             <div className="wrapper">
+//               {productData.map((prod) => {
+//                 return <Card key={prod.id} productData={prod} />;
+//               })}
+//             </div>
+//           </Stack>
+//         </Container>
+//       </Box>
+//     </>
+//   );
+// };
+
+// Page.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+
+// export default Page;
+import React, { useState, useEffect } from "react";
 import Card from "../components/cards/card";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Modal from "react-bootstrap/Modal";
+import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
+import Head from "next/head";
+import { Box, Container, Stack, Typography, Grid } from "@mui/material";
 import AddProductBtn from "src/components/AddProductBtn";
 
-const MenProducts = () => {
+const Page = () => {
   const [productData, setProductData] = useState([]);
-
-  // const [file, setFile] = useState();
-  // const [productTitle, setProductTitle] = useState();
-  // const [productDescription, setProductDescription] = useState();
-  // const [productPrice, setProductPrice] = useState();
+  const [isError, setIsError] = useState();
 
   useEffect(() => {
-    async function fetchProducts() {
-      const response = await axios.get("http://localhost:8080/menProduct");
-      setProductData(response.data.data);
-    }
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/menProduct");
+        setProductData(response.data.data);
+      } catch (error) {
+        setIsError(error.message);
+      }
+    };
     fetchProducts();
   }, []);
-  // const [show, setShow] = useState(false);
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault;
-  //   const formData = new FormData();
-  //   formData.append("file", file);
-  //   formData.append("productTitle", productTitle);
-  //   formData.append("productDescription", productDescription);
-  //   formData.append("productPrice", productPrice);
-  //   debugger;
-  //   axios
-  //     .post("http://localhost:8080/api/products", formData, {
-  //       headers: {
-  //         "Content-type": "multipart/formData",
-  //       },
-  //     })
-  //     .then((response) => {
-  //       handleClose();
-  //     });
-  // };
 
   return (
     <>
-      {/* <Button
-        variant="primary"
-        onClick={handleShow}
-        style={{ marginLeft: "auto", marginRight: "auto" }}
-      >
-        Add Product
-      </Button> */}
-
-      {/* <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Product Modal</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Product Title</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter the name of product"
-                onChange={(event) => {
-                  const title = event.target.value;
-                  setProductTitle(title);
-                }}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Product Image</Form.Label>
-              <Form.Control
-                type="file"
-                placeholder="Input image "
-                onChange={(event) => {
-                  const files = event.target.files[0];
-                  setFile(files);
-                }}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Product Price</Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="Enter the price of product"
-                onChange={(event) => {
-                  const price = event.target.value;
-                  setProductPrice(price);
-                }}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Product Description </Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                onChange={(event) => {
-                  const description = event.target.value;
-                  setProductDescription(description);
-                }}
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleSubmit}>
-            Save Product
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
-      <h2 className="heading">Men's Products</h2>
-      <AddProductBtn />
-      <div className="wrapper">
-        {productData.map((prod) => {
-          return <Card key={prod.id} productData={prod} />;
-        })}
-      </div>
+      <Head>
+        <title>Men&apos;s Clothing | Mahango Deal</title>
+      </Head>
+      <Box component="main" sx={{ flexGrow: 1, py: 8 }}>
+        <Container maxWidth="lg">
+          <Stack spacing={3}>
+            <Grid container spacing={3} alignItems="center">
+              <Grid item xs={12} md={6}>
+                <Typography variant="h4">Men&apos;s Clothing</Typography>
+              </Grid>
+              <Grid item xs={12} md={6} container justifyContent="flex-end">
+                <AddProductBtn />
+              </Grid>
+            </Grid>
+            {isError !== "" && <h2>{isError}</h2>}
+            <div className="wrapper">
+              {productData.map((prod) => {
+                return <Card key={prod.id} productData={prod} />;
+              })}
+            </div>
+          </Stack>
+        </Container>
+      </Box>
     </>
   );
 };
 
-export default MenProducts;
+Page.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+
+export default Page;

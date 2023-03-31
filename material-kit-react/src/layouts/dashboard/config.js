@@ -50,33 +50,6 @@ export const items = [
       </SvgIcon>
     ),
   },
-  {
-    title: "Unisex",
-    path: "/unisex",
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserGroupIcon />
-      </SvgIcon>
-    ),
-  },
-  {
-    title: "Kids",
-    path: "/kids",
-    icon: (
-      <SvgIcon fontSize="small">
-        <PuzzlePeiceIcon />
-      </SvgIcon>
-    ),
-  },
-  {
-    title: "Accessories",
-    path: "/accessories",
-    icon: (
-      <SvgIcon fontSize="small">
-        <RectangleGroupIcon />
-      </SvgIcon>
-    ),
-  },
 
   {
     title: "ABOUT US",
