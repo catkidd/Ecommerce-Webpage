@@ -25,44 +25,44 @@ const Footer = () => {
       </div>
 
       <footer>
-        <div class="container grid grid-four-column">
-          <div class="footer-about">
+        <div className="container grid grid-four-column">
+          <div className="footer-about">
             <h4>Mahango Deal</h4>
             <p>
-             At MahangoDeal, we are passionate about making you feel stylish and comfortable. Hope
+              At MahangoDeal, we are passionate about making you feel stylish and comfortable. Hope
               you have a stress-free shopping experience at MahangoDeal.
             </p>
           </div>
-          <div class="footer-subscribe">
+          <div className="footer-subscribe">
             <h4>Subscribe to get important updates</h4>
             <form action="#">
               <input type="email" name="email" placeholder="YOUR E-MAIL" />
               <input type="submit" value="Subscribe" />
             </form>
           </div>
-          <div class="footer-social">
+          <div className="footer-social">
             <h4>Follow Us</h4>
-            <div class="footer-social--icons">
+            <div className="footer-social--icons">
               <div>
-                <FaDiscord class="icons" />
+                <FaDiscord className="icons" />
               </div>
               <div>
-                <FaInstagram class="icons" />
+                <FaInstagram className="icons" />
               </div>
               <div>
-                <FaFacebook class="icons" />
+                <FaFacebook className="icons" />
               </div>
             </div>
           </div>
-          <div class="footer-contact">
+          <div className="footer-contact">
             <h4>Call Us</h4>
             <h4>+977 9864589941</h4>
           </div>
         </div>
 
-        <div class="footer-bottom--section">
+        <div className="footer-bottom--section">
           <hr />
-          <div class="container grid grid-two-column">
+          <div className="container grid grid-two-column">
             <p>@{new Date().getFullYear()} MahangoDeal. All Rights Reserved</p>
             <div>
               <p>PRIVACY POLICY</p>
