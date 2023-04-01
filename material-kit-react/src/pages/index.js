@@ -13,7 +13,7 @@ const Page = () => (
     </Head>
 
     <LandingCarauselComponent />
-    {/* <HomePage /> */}
+    <HomePage />
     <Footer />
   </>
 );

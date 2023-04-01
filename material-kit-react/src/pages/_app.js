@@ -18,13 +18,10 @@ import "/public/assets/styles/starRating.css";
 import "/public/assets/styles/counterCard.css";
 import "/public/assets/styles/singleProduct.css";
 import "/public/assets/styles/footer.css";
-// import "/public/assets/styles/button.css";
-
 import { Store } from "../redux/store/store";
 import { Provider } from "react-redux";
 import Footer from "src/components/Footer";
-
-// import { ErrorBoundary } from "react-error-boundary";
+import { ErrorBoundary } from "react-error-boundary";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -38,6 +35,8 @@ const App = (props) => {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   const theme = createTheme();
+
+  
 
   return (
     // <ErrorBoundary fallback={<h1>Something went wrong.</h1>}>

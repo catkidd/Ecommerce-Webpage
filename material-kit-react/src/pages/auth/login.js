@@ -50,14 +50,6 @@ const Page = () => {
     setMethod(value);
   }, []);
 
-  // const handleSkip = useCallback(
-  //   () => {
-  //     auth.skip();
-  //     router.push('/');
-  //   },
-  //   [auth, router]
-  // );
-
   return (
     <>
       <Head>
@@ -124,41 +116,15 @@ const Page = () => {
                     value={formik.values.password}
                   />
                 </Stack>
-                {/* <FormHelperText sx={{ mt: 1 }}>
-                  Optionally you can skip.
-                </FormHelperText> */}
+
                 {formik.errors.submit && (
                   <Typography color="error" sx={{ mt: 3 }} variant="body2">
                     {formik.errors.submit}
                   </Typography>
                 )}
-                <Button
-                  // onClick={handleToaster}
-                  fullWidth
-                  size="large"
-                  sx={{ mt: 3 }}
-                  type="submit"
-                  variant="contained"
-                >
+                <Button fullWidth size="large" sx={{ mt: 3 }} type="submit" variant="contained">
                   Continue
                 </Button>
-                {/* <Button
-                  fullWidth
-                  size="large"
-                  sx={{ mt: 3 }}
-                  onClick={handleSkip}
-                >
-                  Skip authentication
-                </Button> */}
-                {/* <Alert
-                  color="primary"
-                  severity="info"
-                  sx={{ mt: 3 }}
-                >
-                  <div>
-                    You can use <b>demo@devias.io</b> and password <b>Password123!</b>
-                  </div>
-                </Alert> */}
               </form>
             )}
           </div>
@@ -167,10 +133,6 @@ const Page = () => {
     </>
   );
 };
-
-// const handleToaster = () => {
-//   toastifyService.success("Login Sucessfull");
-// };
 
 Page.getLayout = (page) => <AuthLayout>{page}</AuthLayout>;
 

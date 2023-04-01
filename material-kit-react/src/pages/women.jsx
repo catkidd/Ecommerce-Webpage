@@ -5,6 +5,7 @@ import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 import Head from "next/head";
 import { Box, Container, Stack, Typography, Unstable_Grid2 as Grid } from "@mui/material";
 import AddProductBtn from "src/components/AddProductBtn";
+import Footer from "src/components/Footer";
 const Page = () => {
   const [productData, setProductData] = useState([]);
   const [isError, setIsError] = useState();
@@ -49,6 +50,7 @@ const Page = () => {
           </Stack>
         </Container>
       </Box>
+      <Footer />
     </>
   );
 };

@@ -35,7 +35,7 @@ export const AccountProfileDetails = () => {
   return (
     <form ref={form} onSubmit={sendEmail}>
       <Card>
-        <CardHeader subheader="The information can be edited" title="Profile" />
+        {/* <CardHeader subheader="The information can be edited" title="Profile" /> */}
         <CardContent sx={{ pt: 0 }}>
           <Box sx={{ m: -1.5 }}>
             <Grid container spacing={3}>
@@ -46,13 +46,13 @@ export const AccountProfileDetails = () => {
                 <TextField fullWidth label="Last name" name="lastName" />
               </Grid>
               <Grid xs={12} md={6}>
-                <TextField fullWidth label="message" name="message" />
+                <TextField fullWidth label="Type Your Message Here" name="message" />
               </Grid>
               <Grid xs={12} md={6}>
                 <TextField fullWidth label="Phone Number" name="phone" />
               </Grid>
               <Grid xs={12} md={6}>
-                <TextField fullWidth label="email" name="email" />
+                <TextField fullWidth label="Enter Your Email" name="email" />
               </Grid>
               <Grid xs={12} md={6}></Grid>
             </Grid>
