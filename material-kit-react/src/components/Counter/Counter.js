@@ -7,9 +7,23 @@ const Counter = ({ cardId }) => {
 
   return (
     <div className="counter-wrapper">
-      <button onClick={() => dispatch(decrement(cardId))}>-</button>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          dispatch(decrement(cardId));
+        }}
+      >
+        -
+      </button>
       <h2>{data.id === cardId ? data.count : 0}</h2>
-      <button onClick={() => dispatch(increment(cardId))}>+</button>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          dispatch(increment(cardId));
+        }}
+      >
+        +
+      </button>
     </div>
   );
 };

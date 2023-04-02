@@ -53,7 +53,7 @@ export const TopNav = (props) => {
             px: 2,
           }}
         >
-          {/* <Stack alignItems="center" direction="row" spacing={2}>
+          <Stack alignItems="center" direction="row" spacing={2}>
             {!lgUp && (
               <IconButton onClick={onNavOpen}>
                 <SvgIcon fontSize="small">
@@ -68,7 +68,7 @@ export const TopNav = (props) => {
                 </SvgIcon>
               </IconButton>
             </Tooltip>
-          </Stack> */}
+          </Stack>
           <Stack alignItems="center" direction="row" spacing={2}>
             <Tooltip title="Cart">
               <IconButton>
@@ -79,7 +79,7 @@ export const TopNav = (props) => {
                 </Badge>
               </IconButton>
             </Tooltip>
-            {/* <Avatar
+            <Avatar
               onClick={accountPopover.handleOpen}
               ref={accountPopover.anchorRef}
               sx={{
@@ -88,15 +88,15 @@ export const TopNav = (props) => {
                 width: 40,
               }}
               src="/assets/avatars/avatar-anika-visser.png"
-            /> */}
+            />
           </Stack>
         </Stack>
       </Box>
-      {/* <AccountPopover
+      <AccountPopover
         anchorEl={accountPopover.anchorRef.current}
         open={accountPopover.open}
         onClose={accountPopover.handleClose}
-      /> */}
+      />
     </>
   );
 };

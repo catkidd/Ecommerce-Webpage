@@ -35,7 +35,7 @@ const Page = () => {
               <Grid item xs={12} md={6}>
                 <Typography variant="h4">Men&apos;s Clothing</Typography>
               </Grid>
-              <Grid item xs={12} md={6} container justifyContent="flex-end">
+              <Grid item xs={12} md={6} container justifyContent="center">
                 <AddProductBtn />
               </Grid>
             </Grid>

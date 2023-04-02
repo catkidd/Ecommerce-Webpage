@@ -1,6 +1,6 @@
 .counter-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: #f2f2f2;
   margin-left: 10px;

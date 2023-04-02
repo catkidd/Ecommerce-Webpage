@@ -35,7 +35,7 @@ const AddProductBtn = () => {
   };
 
   return (
-    <div style={{ position: "absolute", top: "10px", right: "15rem" }}>
+    <div>
       <Grid>
         <Button color="gradient" auto ghost onClick={handleShow}>
           Add product

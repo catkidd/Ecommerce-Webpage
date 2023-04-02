@@ -15,7 +15,7 @@ const homePage = () => {
 
   return (
     <>
-      <h2 className="heading"> Have a look at our best selling products!</h2>
+      <h2 className="heading"> Have a look at our featured products!</h2>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around" }}>
         {productData.map((prod) => {
           return <Card key={prod.id} productData={prod} />;
