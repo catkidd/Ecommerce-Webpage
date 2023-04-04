@@ -13,7 +13,7 @@ const CardContainer = styled(Box)`
 `;
 
 const CardImage = styled.img`
-  width: 50rem;
+  width: 20rem;
   height: auto;
   margin-right: 16px;
 `;
