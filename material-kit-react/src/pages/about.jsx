@@ -4,12 +4,11 @@ import { Button } from "@nextui-org/react";
 import { useRouter } from "next/router";
 import Footer from "src/components/Footer";
 
-const Page = () => {
+const About = () => {
   const router = useRouter();
+
   const handleAddToCart = (e) => {
-    if (e && e.preventDefault) {
-      e.preventDefault();
-    }
+    e.preventDefault();
     router.push({
       pathname: "/",
     });
@@ -20,12 +19,13 @@ const Page = () => {
         <div className="grid grid-two-column">
           <div className="hero-section-data">
             <p className="intro-data">Welcome to </p>
-            <h1> MahangoDeal </h1>
+            <h1> Mahango Deal </h1>
             <p>
-              Your go-to online destination for all your fashion needs. Our mission is to provide
-              you with high-quality, stylish clothing and accessories at affordable prices. From
-              trendy basics to statement pieces, we've got you covered. So why wait? Start shopping
-              now and discover your new favorite pieces!
+              Looking for fashionable clothing and accessories? Look no further than our online
+              store. Our goal is to offer you high-quality, stylish products at prices that won't
+              break the bank. Whether you're looking for trendy basics or eye-catching statement
+              pieces, we have everything you need to look and feel your best. Don't wait any longer
+              - start shopping now and find your new go-to pieces!
             </p>
             <Button
               color="gradient"
@@ -52,8 +52,8 @@ const Wrapper = styled.section`
   padding: 3rem 0;
   background-color: #f1f1f1;
   img {
-    min-width: 10rem;
-    height: 10rem;
+    min-width: 8rem;
+    height: 8rem;
     border-radius: 5%;
     border: 2px solid #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -121,6 +121,6 @@ const Wrapper = styled.section`
   }
 `;
 
-Page.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+About.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
-export default Page;
+export default About;

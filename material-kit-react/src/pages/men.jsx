@@ -7,7 +7,7 @@ import { Box, Container, Stack, Typography, Grid } from "@mui/material";
 import AddProductBtn from "src/components/AddProductBtn";
 import Footer from "src/components/Footer";
 
-const Page = () => {
+const Men = () => {
   const [productData, setProductData] = useState([]);
   const [isError, setIsError] = useState();
 
@@ -53,6 +53,6 @@ const Page = () => {
   );
 };
 
-Page.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+Men.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
-export default Page;
+export default Men;

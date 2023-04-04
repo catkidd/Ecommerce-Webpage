@@ -16,21 +16,25 @@
 }
 
 .card-container {
+  text-align: center;
+  overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
   transition: 0.5s;
   border-radius: 5px;
   margin: 10px;
+  transition: ease 0.5s all;
 }
 
 .card-container:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.card-container img {
-  height: 200px;
-  object-fit: contain;
+.card-container:hover img {
+  top: -100px;
+  scale: 1.15;
+  transition: all 0.5s ease-in-out;
 }
-
 .card-container .card-body {
   padding: 5px;
 }
@@ -38,6 +42,10 @@
 .card-container .card-title {
   font-weight: bold;
   font-size: 20px;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .card-container .card-text {
@@ -53,13 +61,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 4px;
 }
-.card-title {
-  margin-top: 10px;
-}
 
-.card-price {
-  color: red;
-}
 .card-body button {
   margin-top: 15px;
   margin-right: 5rem;

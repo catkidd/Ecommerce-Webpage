@@ -107,11 +107,15 @@ footer {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   color: #e1e0e4;
-  background-color: #15e8e18b;
+  background-color: #6864f4;
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+.footer-subscribe form input[type="submit"]:hover {
+  background-color: #4640f2;
 }
 
 @media (max-width: 768px) {

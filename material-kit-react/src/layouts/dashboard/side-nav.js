@@ -68,15 +68,9 @@ export const SideNav = (props) => {
           >
             <div>
               <Typography color="inherit" variant="subtitle1">
-                MongoDeal
-              </Typography>
-              <Typography color="neutral.400" variant="body2">
-                Production
+                Mahango Deal
               </Typography>
             </div>
-            <SvgIcon fontSize="small" sx={{ color: "neutral.500" }}>
-              <ChevronUpDownIcon />
-            </SvgIcon>
           </Box>
         </Box>
         <Divider sx={{ borderColor: "neutral.700" }} />

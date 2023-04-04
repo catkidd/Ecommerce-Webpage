@@ -1,72 +1,40 @@
-import ChartBarIcon from "@heroicons/react/24/solid/ChartBarIcon";
-import CogIcon from "@heroicons/react/24/solid/CogIcon";
-import LockClosedIcon from "@heroicons/react/24/solid/LockClosedIcon";
-import ShoppingBagIcon from "@heroicons/react/24/solid/ShoppingBagIcon";
-import UserIcon from "@heroicons/react/24/solid/UserIcon";
-import UserPlusIcon from "@heroicons/react/24/solid/UserPlusIcon";
-import UsersIcon from "@heroicons/react/24/solid/UsersIcon";
-import XCircleIcon from "@heroicons/react/24/solid/XCircleIcon";
-import { SvgIcon } from "@mui/material";
-import UserGroupIcon from "@heroicons/react/24/solid/UserGroupIcon";
-import PuzzlePeiceIcon from "@heroicons/react/24/solid/PuzzlePieceIcon";
-import RectangleGroupIcon from "@heroicons/react/24/solid/RectangleGroupIcon";
-import AtSymbolIcon from "@heroicons/react/24/solid/AtSymbolIcon";
-import QuestionMarkCircleIcon from "@heroicons/react/24/solid/QuestionMarkCircleIcon";
+import HomeIcon from "@mui/icons-material/Home";
+import LocalMallIcon from "@mui/icons-material/LocalMall";
+import MaleIcon from "@mui/icons-material/Male";
+import FemaleIcon from "@mui/icons-material/Female";
+import InfoIcon from "@mui/icons-material/Info";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 export const items = [
   {
     title: "Home",
     path: "/",
-    icon: (
-      <SvgIcon fontSize="small">
-        <ChartBarIcon />
-      </SvgIcon>
-    ),
+    icon: <HomeIcon />,
   },
   {
     title: "Best Deals",
-    path: "/bestDeals",
-    icon: (
-      <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
-      </SvgIcon>
-    ),
+    path: "/bestdeals",
+    icon: <LocalMallIcon />,
   },
   {
     title: "Men",
     path: "/men",
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserIcon />
-      </SvgIcon>
-    ),
+    icon: <MaleIcon />,
   },
   {
     title: "Women",
     path: "/women",
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserIcon />
-      </SvgIcon>
-    ),
+    icon: <FemaleIcon />,
   },
 
   {
-    title: "ABOUT US",
+    title: "About Us",
     path: "/about",
-    icon: (
-      <SvgIcon fontSize="small">
-        <QuestionMarkCircleIcon />
-      </SvgIcon>
-    ),
+    icon: <InfoIcon />,
   },
   {
-    title: "CONTACT",
+    title: "Contact Us",
     path: "/contact",
-    icon: (
-      <SvgIcon fontSize="small">
-        <AtSymbolIcon />
-      </SvgIcon>
-    ),
+    icon: <AlternateEmailIcon />,
   },
 ];

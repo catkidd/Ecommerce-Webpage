@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Box, Button } from "@mui/material";
 import { useSelector } from "react-redux";
+import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 
 const CardContainer = styled(Box)`
   display: flex;
@@ -46,5 +47,7 @@ const SingleProduct = () => {
     </CardContainer>
   );
 };
+
+SingleProduct.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
 export default SingleProduct;

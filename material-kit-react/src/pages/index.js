@@ -9,7 +9,7 @@ const now = new Date();
 const Page = () => (
   <>
     <Head>
-      <title>Overview | MahangoDeal</title>
+      <title>Overview | Mahango Deal</title>
     </Head>
 
     <LandingCarauselComponent />

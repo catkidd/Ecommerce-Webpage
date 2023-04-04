@@ -61,18 +61,11 @@ export const TopNav = (props) => {
                 </SvgIcon>
               </IconButton>
             )}
-            <Tooltip title="Search">
-              <IconButton>
-                <SvgIcon fontSize="medium">
-                  <MagnifyingGlassIcon />
-                </SvgIcon>
-              </IconButton>
-            </Tooltip>
           </Stack>
           <Stack alignItems="center" direction="row" spacing={2}>
-            <Tooltip title="Cart">
+            <Tooltip title="Cart Items">
               <IconButton>
-                <Badge badgeContent={4} color="secondary">
+                <Badge badgeContent={2} color="secondary">
                   <SvgIcon fontSize="medium">
                     <ShoppingCartIcon />
                   </SvgIcon>

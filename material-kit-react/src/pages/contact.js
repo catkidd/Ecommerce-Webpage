@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { emailConfig } from "src/config/email.config";
 import { toastifyService } from "src/services/toastify.service";
 import emailjs from "@emailjs/browser";
+import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 
 const Contact = () => {
   const form = useRef();
@@ -63,25 +64,22 @@ const Contact = () => {
             background-color: #e6e6e6;
 
             &:focus {
+              border: 2px solid #6864f4;
               outline: none;
-              box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
             }
           }
 
           input[type="submit"] {
             cursor: pointer;
-            transition: all 0.2s;
-            background-color: black;
+            transition: all 0.5s ease;
+            background-color: #6864f4;
             color: white;
             padding: 1rem 1rem;
             border-radius: 5px;
             border: none;
 
             &:hover {
-              background-color: white;
-              border: 1px solid black;
-              color: black;
-              transform: scale(0.9);
+              background-color: #4640f2;
             }
           }
         }
@@ -125,5 +123,7 @@ const Contact = () => {
     </Wrapper>
   );
 };
+
+Contact.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
 export default Contact;

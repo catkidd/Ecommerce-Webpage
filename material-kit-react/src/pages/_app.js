@@ -21,7 +21,8 @@ import "/public/assets/styles/footer.css";
 import { Store } from "../redux/store/store";
 import { Provider } from "react-redux";
 import Footer from "src/components/Footer";
-import { ErrorBoundary } from "react-error-boundary";
+// import { ErrorBoundary } from "react-error-boundary";
+import GotoUp from "src/components/GotoUp";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -35,8 +36,6 @@ const App = (props) => {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   const theme = createTheme();
-
-  
 
   return (
     // <ErrorBoundary fallback={<h1>Something went wrong.</h1>}>
@@ -54,8 +53,8 @@ const App = (props) => {
             </ThemeProvider>
           </AuthProvider>
         </LocalizationProvider>
-
         <ToastContainer />
+        <GotoUp />
       </CacheProvider>
     </Provider>
     // </ErrorBoundary>
