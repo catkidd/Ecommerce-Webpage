@@ -20,31 +20,31 @@ const CardImage = styled.img`
 
 const ContentContainer = styled(Box)`
   display: flex;
+  align-items: center;
   flex-direction: column;
-  text-align: center;
 `;
 
 const CheckoutButton = styled(Button)`
   width: 120px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 `;
 
 const SingleProduct = () => {
   const product = useSelector((state) => state.products);
 
+  console.log(product);
   return (
-    <CardContainer>
-      <CardImage src={product.image} alt={product.title} />
-      <ContentContainer>
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-        {/* <CheckoutButton variant="contained" color="primary">
-          Checkout
-        </CheckoutButton> */}
-      </ContentContainer>
-    </CardContainer>
+    <>
+      <CardContainer>
+        <CardImage src={product.image} alt={product.title} />
+        <ContentContainer>
+          <h2>{product.title}</h2>
+          <p>{product.description}</p>
+          <CheckoutButton variant="contained" color="primary">
+            Checkout
+          </CheckoutButton>
+        </ContentContainer>
+      </CardContainer>
+    </>
   );
 };
 

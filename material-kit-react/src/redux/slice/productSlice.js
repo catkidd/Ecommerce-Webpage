@@ -11,15 +11,14 @@ export const ProductSlice = createSlice({
     price: 0,
   },
   reducers: {
-    addToCart: (state, action) => {
-      console.log("state before update:", state);
+    addToCart(state, action) {
+      // console.log(action.payload);
       state.id = action.payload.id;
       state.title = action.payload.title;
       state.description = action.payload.description;
       state.brand = action.payload.brand;
       state.image = action.payload.image;
       state.price = action.payload.price;
-      console.log("state after update:", state);
     },
   },
 });

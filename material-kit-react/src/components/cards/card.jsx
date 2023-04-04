@@ -12,16 +12,12 @@ const ProductCard = (props) => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const showProductDetail = (e, data) => {
+  const handleAdd = (e, product) => {
     e.preventDefault();
-
-    console.log("addToCart payload:", data);
-
-    dispatch(addToCart(data));
-    router.push({
-      pathname: "/singleProduct",
-    });
+    dispatch(addToCart(product));
+    router.push({ pathname: "/singleProduct" });
   };
+
   return (
     <>
       <Card className="card-container" style={{ width: "20rem", height: "auto" }}>
@@ -66,13 +62,12 @@ const ProductCard = (props) => {
 
           <Button
             className="d-flex align-item-center my-3 mx-auto border-0"
-            onClick={showProductDetail}
+            onClick={(e) => handleAdd(e, props.productData)}
             variant="contained"
             startIcon={<AddShoppingCartOutlinedIcon sx={{ fontSize: 30 }} />}
           >
             Add To Cart
           </Button>
-          {/* <Counter cardId={props.productData.id} /> */}
         </Card.Body>
       </Card>
     </>

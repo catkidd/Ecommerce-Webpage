@@ -146,7 +146,7 @@ const womenProduct = [
 
 const featuredProduct = [
     {
-        id: "1",
+        id: 1,
         title: "iphone x",
         company: "apple",
         price: 6000000,
@@ -162,7 +162,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "2",
+        id: 2,
         title: "samsung s20",
         company: "samsung",
         price: 5000000,
@@ -178,7 +178,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "3",
+        id: 3,
         title: "Dell Series",
         company: "dell",
         price: 600000,
@@ -193,7 +193,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "4",
+        id: 4,
         title: "Nokia 420",
         company: "nokia",
         price: 12599,
@@ -209,7 +209,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "5",
+        id: 5,
         title: "Mac Pc",
         company: "apple",
         price: 4000099,
@@ -225,7 +225,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "6",
+        id: 6,
         title: "Macbook Pro",
         company: "apple",
         price: 42999,
@@ -241,7 +241,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "7",
+        id: 7,
         title: "Asus gseries",
         company: "asus",
         price: 23999,
@@ -257,7 +257,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "8",
+        id: 8,
         title: "Accessories",
         price: 1099999,
         company: "lenova",
@@ -274,7 +274,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "9",
+        id: 9,
         title: "Iwatch",
         price: 39999,
         company: "apple",
@@ -290,7 +290,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "10",
+        id: 10,
         title: "user need",
         company: "apple",
         price: 300099,
@@ -305,7 +305,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "11",
+        id: 11,
         title: "rolex premium",
         company: "rolex",
         price: 999999,
@@ -320,7 +320,7 @@ const featuredProduct = [
         },
     },
     {
-        id: "12",
+        id: 12,
         title: "galaxy w20",
         price: 311999,
         company: "samsung",
@@ -347,14 +347,14 @@ app.get("/menProduct", (req, res) => {
 app.get("/womenProduct", (req, res) => {
     res.json({
         status: true,
-        message: "Men's Products returned successfully",
+        message: "Women's Products returned successfully",
         data: womenProduct,
     });
 });
 app.get("/featuredProduct", (req, res) => {
     res.json({
         status: true,
-        message: "Men's Products returned successfully",
+        message: "Feature Products returned successfully",
         data: featuredProduct,
     });
 });
